@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Windy147.github.io/windy.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Windy147.github.io/windy.github.io</link></image><lastBuildDate>Fri, 05 Apr 2024 04:24:52 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>ubuntu安装plasma桌面环境</title><link>https://Windy147.github.io/windy.github.io/post/ubuntu-an-zhuang-plasma-zhuo-mian-huan-jing.html</link><description>sudo apt autoremove ubuntu-nimimal  ubuntu-desktop gnome-shell&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Windy147.github.io/windy.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Windy147.github.io/windy.github.io</link></image><lastBuildDate>Fri, 05 Apr 2024 07:24:42 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>nmap 常用命令</title><link>https://Windy147.github.io/windy.github.io/post/nmap%20-chang-yong-ming-ling.html</link><description>1.扫描所有端口&#13;
+&#13;
+`sudo nmap -p- 127.0.0.1`&#13;
+&#13;
+2.服务版本信息&#13;
+&#13;
+`sudo nmap -sV 127.0.0.1`&#13;
+&#13;
+3.排除特定的ip&#13;
+&#13;
+`nmap 192.168.43.0/24 --exclude 192.168.43.80`&#13;
+&#13;
+`nmap 192.168.43.0/24 --excludefile list.txt`&#13;
+&#13;
+4.更改扫描ip&#13;
+&#13;
+`nmap --send-ip 192.168.43.80`&#13;
+&#13;
+5.猜测主机所使用的操作系统&#13;
+&#13;
+`nmap -O --osscan-guess 127.0.0.1`&#13;
+&#13;
+。</description><guid isPermaLink="true">https://Windy147.github.io/windy.github.io/post/nmap%20-chang-yong-ming-ling.html</guid><pubDate>Fri, 05 Apr 2024 07:24:08 +0000</pubDate></item><item><title>ubuntu安装plasma桌面环境</title><link>https://Windy147.github.io/windy.github.io/post/ubuntu-an-zhuang-plasma-zhuo-mian-huan-jing.html</link><description>sudo apt autoremove ubuntu-nimimal  ubuntu-desktop gnome-shell&#13;
 &#13;
 sudo apt install plasma-desktop。</description><guid isPermaLink="true">https://Windy147.github.io/windy.github.io/post/ubuntu-an-zhuang-plasma-zhuo-mian-huan-jing.html</guid><pubDate>Fri, 05 Apr 2024 04:24:21 +0000</pubDate></item><item><title>linux更换主机名</title><link>https://Windy147.github.io/windy.github.io/post/linux-geng-huan-zhu-ji-ming.html</link><description>`sudo hostnamectl set-hostname &lt;new_hostname&gt;`&#13;
 `vim /etc/hostname`&#13;
