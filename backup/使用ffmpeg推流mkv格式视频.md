@@ -1,0 +1,1 @@
+`ffmpeg -re  -stream_loop -1 -i linux100.mkv -c:v copy -ar 44100  -c:a aac  -f flv rtmp://127.0.0.1/live/linux100`
