@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Windy147.github.io/windy.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Windy147.github.io/windy.github.io</link></image><lastBuildDate>Wed, 17 Apr 2024 03:03:39 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>ffmpeg合并rmvb格式文件</title><link>https://Windy147.github.io/windy.github.io/post/ffmpeg-he-bing-rmvb-ge-shi-wen-jian.html</link><description>`ffmpeg -i 1.rmvb -i 2.rmvb -i 3.rmvb -filter_complex "[0:v:0][0:a:0][1:v:0][1:a:0][2:v:0][&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Windy147.github.io/windy.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Windy147.github.io/windy.github.io</link></image><lastBuildDate>Wed, 17 Apr 2024 03:13:17 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>使用ffmpeg循环推流</title><link>https://Windy147.github.io/windy.github.io/post/shi-yong-ffmpeg-xun-huan-tui-liu.html</link><description>```#!/bin/bash&#13;
+while true&#13;
+        do&#13;
+                cd /root/aria2-downloads/&#13;
+                for video in $(ls *.mp4)&#13;
+                do&#13;
+                ffmpeg -re -i "$video" -c:v copy -c:a aac -b:a 192k -strict -2 -f flv "rtmp://127.0.0.1/live/123"&#13;
+                done&#13;
+        done&#13;
+```&#13;
+。</description><guid isPermaLink="true">https://Windy147.github.io/windy.github.io/post/shi-yong-ffmpeg-xun-huan-tui-liu.html</guid><pubDate>Wed, 17 Apr 2024 03:12:46 +0000</pubDate></item><item><title>ffmpeg合并rmvb格式文件</title><link>https://Windy147.github.io/windy.github.io/post/ffmpeg-he-bing-rmvb-ge-shi-wen-jian.html</link><description>`ffmpeg -i 1.rmvb -i 2.rmvb -i 3.rmvb -filter_complex "[0:v:0][0:a:0][1:v:0][1:a:0][2:v:0][&#13;
 2:a:0]concat=n=3:v=1:a=1[v][a]" -map "[v]" -map "[a]" -c:v libx264 -c:a aac -movflags +faststart output.mp4&#13;
 `&#13;
 &#13;
