@@ -31,3 +31,5 @@ ffmpeg -i "concat:${concat_string:1}" -c:v libx264 -c:a aac -movflags +faststart
 
 echo "合并完成"
 ```
+
+`ffmpeg -f concat -safe 0 -i input.txt -c:v libx264 -c:a aac -movflags +faststart out.mp4`
