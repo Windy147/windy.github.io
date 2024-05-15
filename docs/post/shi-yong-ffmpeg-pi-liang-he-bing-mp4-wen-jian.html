@@ -9,7 +9,32 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="使用ffmpeg批量合并mp4文件">
+<meta name="description" content="```
+#!/bin/bash
+for file in ./*.mp4
+do
+        echo "file '$(basename "$file")'" >> tmp.txt
+done
+sort -t 'P' -k 2n tmp.txt >>input.txt
+rm tmp.txt
+ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
+
+```。">
+<meta property="og:title" content="使用ffmpeg批量合并mp4文件">
+<meta property="og:description" content="```
+#!/bin/bash
+for file in ./*.mp4
+do
+        echo "file '$(basename "$file")'" >> tmp.txt
+done
+sort -t 'P' -k 2n tmp.txt >>input.txt
+rm tmp.txt
+ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
+
+```。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Windy147.github.io/windy.github.io/post/shi-yong-ffmpeg-pi-liang-he-bing-mp4-wen-jian.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>使用ffmpeg批量合并mp4文件</title>
 
 

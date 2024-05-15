@@ -9,7 +9,12 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="使用ffmpeg推流mkv格式视频">
+<meta name="description" content="`ffmpeg -re  -stream_loop -1 -i linux100.mkv -c:v copy -ar 44100  -c:a aac  -f flv rtmp://127.0.0.1/live/linux100`。">
+<meta property="og:title" content="使用ffmpeg推流mkv格式视频">
+<meta property="og:description" content="`ffmpeg -re  -stream_loop -1 -i linux100.mkv -c:v copy -ar 44100  -c:a aac  -f flv rtmp://127.0.0.1/live/linux100`。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Windy147.github.io/windy.github.io/post/shi-yong-ffmpeg-tui-liu-mkv-ge-shi-shi-pin.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>使用ffmpeg推流mkv格式视频</title>
 
 

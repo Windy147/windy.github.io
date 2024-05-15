@@ -9,7 +9,30 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="批量重命名（数字为名）">
+<meta name="description" content="```
+#!/bin/bash
+
+count=1
+for file in $(ls *.rmvb); do
+    mv "$file" "${count}.rmvb"
+    ((count++))
+done
+
+```。">
+<meta property="og:title" content="批量重命名（数字为名）">
+<meta property="og:description" content="```
+#!/bin/bash
+
+count=1
+for file in $(ls *.rmvb); do
+    mv "$file" "${count}.rmvb"
+    ((count++))
+done
+
+```。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Windy147.github.io/windy.github.io/post/pi-liang-zhong-ming-ming-%EF%BC%88-shu-zi-wei-ming-%EF%BC%89.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>批量重命名（数字为名）</title>
 
 

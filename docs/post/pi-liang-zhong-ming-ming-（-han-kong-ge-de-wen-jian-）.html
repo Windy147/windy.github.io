@@ -9,7 +9,64 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="批量重命名（含空格的文件）">
+<meta name="description" content="```
+#!/bin/bash
+
+folder_path="./"
+# 进入文件夹
+cd "$folder_path" || exit
+
+# 获取文件夹下所有的.mp4文件，并按照字母顺序排序
+mp4_files=(*.mp4)
+IFS=$'\n' mp4_files=($(sort -t 'P' -k 2n<<<"${mp4_files[*]}"))
+unset IFS
+
+# 初始化计数器
+counter=1
+
+# 逐个重命名文件
+for file in "${mp4_files[@]}"; do
+    # 新文件名
+    new_name="video_${counter}.mp4"
+    # 重命名文件
+    mv -- "$file" "$new_name"
+    # 计数器递增
+    ((counter++))
+done
+
+
+```。">
+<meta property="og:title" content="批量重命名（含空格的文件）">
+<meta property="og:description" content="```
+#!/bin/bash
+
+folder_path="./"
+# 进入文件夹
+cd "$folder_path" || exit
+
+# 获取文件夹下所有的.mp4文件，并按照字母顺序排序
+mp4_files=(*.mp4)
+IFS=$'\n' mp4_files=($(sort -t 'P' -k 2n<<<"${mp4_files[*]}"))
+unset IFS
+
+# 初始化计数器
+counter=1
+
+# 逐个重命名文件
+for file in "${mp4_files[@]}"; do
+    # 新文件名
+    new_name="video_${counter}.mp4"
+    # 重命名文件
+    mv -- "$file" "$new_name"
+    # 计数器递增
+    ((counter++))
+done
+
+
+```。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Windy147.github.io/windy.github.io/post/pi-liang-zhong-ming-ming-%EF%BC%88-han-kong-ge-de-wen-jian-%EF%BC%89.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>批量重命名（含空格的文件）</title>
 
 

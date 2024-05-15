@@ -9,7 +9,32 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="使用ffmpeg循环推流">
+<meta name="description" content="```#!/bin/bash
+while true
+        do
+                cd /root/aria2-downloads/
+                for video in $(ls *.mp4)
+                do
+                ffmpeg -re -i "$video" -c:v copy -c:a aac -b:a 192k -strict -2 -f flv "rtmp://127.0.0.1/live/123"
+                done
+        done
+```
+。">
+<meta property="og:title" content="使用ffmpeg循环推流">
+<meta property="og:description" content="```#!/bin/bash
+while true
+        do
+                cd /root/aria2-downloads/
+                for video in $(ls *.mp4)
+                do
+                ffmpeg -re -i "$video" -c:v copy -c:a aac -b:a 192k -strict -2 -f flv "rtmp://127.0.0.1/live/123"
+                done
+        done
+```
+。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Windy147.github.io/windy.github.io/post/shi-yong-ffmpeg-xun-huan-tui-liu.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>使用ffmpeg循环推流</title>
 
 
