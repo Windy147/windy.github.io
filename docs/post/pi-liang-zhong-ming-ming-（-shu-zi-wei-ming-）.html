@@ -14,7 +14,7 @@
 
 count=1
 for file in $(ls *.rmvb); do
-    mv "$file" "${count}.rmvb"
+    mv '$file' '${count}.rmvb'
     ((count++))
 done
 
@@ -25,7 +25,7 @@ done
 
 count=1
 for file in $(ls *.rmvb); do
-    mv "$file" "${count}.rmvb"
+    mv '$file' '${count}.rmvb'
     ((count++))
 done
 
@@ -191,7 +191,6 @@ function iFrameLoading(){
     }
 }
 </script>
-
 
 
 </html>
